@@ -4,13 +4,16 @@ Códigos contendo análise do MQTT
 
 ## Conteúdo:
 
-- `payload_test.sh` Aumenta gradativamente um caractere da mensagem enviada a cara iteração
-- `publisher_test.sh` Recebe do usuário o numero de frequência de publicações e a cada iteração o número de instâncias deste programa aumenta.
-- `publish_subs_test.sh` Recebe do usuário o numero de frequência de publicações e a cada iteração o número de instâncias deste programa aumenta, além de publicar em mais de um subscribe.
-- `LogaProcessamentoPS.sh` Captura o uso de CPU e memória
+- `payload_test.sh` Aumenta gradativamente um caractere da mensagem enviada a cara iteração;
+- `publisher_test.sh` Recebe do usuário o numero de frequência de publicações e a cada iteração o número de instâncias deste programa aumenta;
+- `publish_subs_test.sh` Recebe do usuário o numero de frequência de publicações e a cada iteração o número de instâncias deste programa aumenta, além de publicar em mais de um subscribe;
+- `publisher_using_python.sh` Cria um processo de publisher_ex2e3.py e cria N processos de mosquitto_sub durante um tempo pré determinado;
+- `publish_subs_using_python.sh` Cria N processos de publisher_ex2e3.py durante um tempo pré determinado;
+- `publisher_ex2e3.py` Faz uma publicação em um tópico usando json;
+- `LogaProcessamentoPS.sh` Captura o uso de CPU e memória.
 
 
-##Uso
+## Uso
 
 1. Instalar  Mosquitto e o gnuplot
 ```
@@ -36,9 +39,9 @@ mosquitto_sub -t "#" -v
 
 6. Abra outro terminal e execute:
 
-  6.1. Para testes com bash:
+- 6.1. Para testes com `bash`:
 
-    Para o test 1 params: -p):
+    Para o test 1 (params: -p):
     ```
     /bin/bash publisher_test.sh
     ```
@@ -53,7 +56,7 @@ mosquitto_sub -t "#" -v
     /bin/bash publish_subs_test.sh -p <NUM_FREQ>
     ```
 
-  6.2. Para testes com python:
+- 6.2. Para testes com `python`:
 
     Para o test 2:
     ```
